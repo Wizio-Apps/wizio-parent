@@ -1,0 +1,9 @@
+{
+    "menu": [
+        {
+            "_id": "1",
+            "label": "Home",
+            "path" : "/home"
+        }
+    ]
+}
