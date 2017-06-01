@@ -29,7 +29,7 @@
 	</servlet-mapping>
 	<filter>
 		<filter-name>cors</filter-name>
-		<filter-class>org.wizio.commons.utils.filter.CORSFilter</filter-class>
+		<filter-class>org.wizio.portal.commons.filter.CORSFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>cors</filter-name>

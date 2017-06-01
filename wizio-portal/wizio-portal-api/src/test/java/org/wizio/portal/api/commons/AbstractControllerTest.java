@@ -24,7 +24,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import com.lordofthejars.nosqlunit.mongodb.MongoDbRule;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"/applicationContext.xml", "/WEB-INF/spring/applicationServlet.xml"})
+@ContextConfiguration(locations={"/applicationContext.xml", "/applicationServlet.xml"})
 @WebAppConfiguration
 public abstract class AbstractControllerTest {
 	

@@ -16,6 +16,11 @@
 			<artifactId>wizio-portal-business</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>wizio-portal-commons</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<!-- WEB -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

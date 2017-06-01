@@ -11,35 +11,50 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
 
-<!-- EXPLOIT -->
-<!-- 	<context:annotation-config /> -->
-<!-- 	<context:component-scan base-package="org.wizio.portal" /> -->
+	<!-- EXPLOIT -->
+	<!-- <context:annotation-config /> -->
+	<!-- <context:component-scan base-package="org.wizio.portal" /> -->
 
-<!-- 	<mongo:repositories base-package="org.wizio.portal.persistence.repository" /> -->
+	<!-- <mongo:repositories base-package="org.wizio.portal.persistence.repository" 
+		/> -->
 
-<!-- 	<bean id="org.dozer.mapper" class="org.dozer.DozerBeanMapper"> -->
-<!-- 		<property name="mappingFiles"> -->
-<!-- 			<list> -->
-<!-- 				<value>dozer/dozer-business-mapping.xml</value> -->
-<!-- 			</list> -->
-<!-- 		</property> -->
-<!-- 	</bean> -->
+	<!-- <bean id="org.dozer.mapper" class="org.dozer.DozerBeanMapper"> -->
+	<!-- <property name="mappingFiles"> -->
+	<!-- <list> -->
+	<!-- <value>dozer/dozer-business-mapping.xml</value> -->
+	<!-- </list> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+
+	<!-- <jee:jndi-lookup id="mongoTemplate" jndi-name="java:/comp/env/mongo/wizioDB" 
+		expected-type="org.springframework.data.mongodb.core.MongoTemplate" /> -->
+
+
+	<!-- DEV -->
+	<context:annotation-config />
+	<context:component-scan base-package="org.wizio.portal" />
 	
-<!-- 	<jee:jndi-lookup id="mongoTemplate" jndi-name="java:/comp/env/mongo/wizioDB" expected-type="org.springframework.data.mongodb.core.MongoTemplate" /> -->
-
-
-<!-- DEV -->
-<bean name="fongo" class="com.github.fakemongo.Fongo">
+	<bean name="fongo" class="com.github.fakemongo.Fongo">
 		<constructor-arg value="InMemoryMongo" />
 	</bean>
-	
+
 	<bean id="mongo" factory-bean="fongo" factory-method="getMongo" />
 
-	<mongo:db-factory id="mongoDbFactory" mongo-ref="mongo" dbname="mongolink"/>
+	<mongo:db-factory id="mongoDbFactory" mongo-ref="mongo"
+		dbname="mongolink" />
 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg ref="mongoDbFactory" />
 	</bean>
-	
+
 	<mongo:repositories base-package="org.wizio.portal.persistence.repository" />
+
+	<bean id="org.dozer.mapper" class="org.dozer.DozerBeanMapper">
+		<property name="mappingFiles">
+			<list>
+				<value>dozer/dozer-business-mapping.xml</value>
+				<value>dozer/dozer-api-mapping.xml</value>
+			</list>
+		</property>
+	</bean>
 </beans>

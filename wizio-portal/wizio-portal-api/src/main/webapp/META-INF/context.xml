@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
-<Context docBase="ets-manager-web" path="/ets-manager-web" reloadable="true">
-
-	<!-- Datasource MongoDB -->
-	<ResourceLink type="org.springframework.data.mongodb.core.MongoTemplate" name="mongo/wizioDB" global="mongo/wizioDB"/>
-	
-<!-- 	<Resource name="bean/MyMongoBean" auth="Container" -->
-<!--         type="org.springframework.data.mongodb.core.MongoTemplate" -->
-<!--         factory="com.package.CustomMongoJNDIFactory" -->
-<!--         host="" db="" username="" password=""/> -->
+<Context docBase="wizio-portal-api" path="/wizio" reloadable="true">
 
 </Context>
