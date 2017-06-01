@@ -4,29 +4,16 @@
 	<parent>
 		<groupId>org.wizio</groupId>
 		<artifactId>wizio-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>wizio-portal</artifactId>
 	<packaging>pom</packaging>
 	<name>Wizio :: Portal</name>
-	
-	<properties>
-		<wizio.commons.version>0.0.1.SNAPSHOT</wizio.commons.version>
-	</properties>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>wizio-commons</artifactId>
-			<version>${wizio.commons.version}</version>
-		</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<modules>
 		<module>wizio-portal-persistence</module>
 		<module>wizio-portal-business</module>
 		<module>wizio-portal-api</module>
+		<module>wizio-portal-commons</module>
 	</modules>
 </project>
