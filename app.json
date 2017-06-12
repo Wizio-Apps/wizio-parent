@@ -1,0 +1,15 @@
+{
+  "name": "wizio-parent",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
